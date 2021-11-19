@@ -17,6 +17,9 @@ void printBin(int n)
         printf("%d", (n&(1<<i)) != 0);
     printf("\n");
 }
+int eq(int x,int y){
+    return !(x^y);
+}
 int main(){
         int x = 0xFF;
         printf("%d\n",x);
@@ -24,9 +27,12 @@ int main(){
         printBin(x);
         printf("%ld\n",sizeof(x));
         long y = ~0xFF;
-        //printf("%d\n",y);
-        //printf("%X\n",y);
+        printf("%ld\n",y);
+        printf("%lX\n",y);
         printf("%ld\n",sizeof(y));
         printBin(y);
+        int a=1;
+        int b=1;
+        printf("%d",eq(a,b));
         return 0;
 }
